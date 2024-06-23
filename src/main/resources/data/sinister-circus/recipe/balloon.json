@@ -12,7 +12,6 @@
         }
     ],
     "result": {
-        "item": "sinister-circus:balloon",
-        "count": 1
+        "id": "sinister-circus:balloon"
     }
 }

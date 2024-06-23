@@ -36,7 +36,7 @@ public abstract class PersistentProjectileEntityMixin extends Entity{
     @Inject(method = "tick", at = @At(value = "HEAD"))
     private void overrideTick(CallbackInfo info){
         Vec3d pos = this.getPos();
-        if (!this.inGround && this.getItemStack().isOf(Items.SPECTRAL_ARROW)){
+        if (!this.inGround && this.getCommandTags().contains("trickster-crossbow")){
             SinisterCircus.showParticlesToAll(this.getWorld(), ModParticles.JESTER_CROSSBOW_TRAIL, pos, 0, 1, 0);
         }
     }

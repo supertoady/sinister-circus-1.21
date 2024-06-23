@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bib",
+    "a/a",
+    " / "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:red_wool"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "b": {
+      "item": "minecraft:black_wool"
+    },
+    "i": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "id": "minecraft:mace"
+  }
+}

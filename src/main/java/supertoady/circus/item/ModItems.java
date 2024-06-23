@@ -7,14 +7,11 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import supertoady.circus.SinisterCircus;
-import supertoady.circus.item.custom.JesterArmourItem;
-import supertoady.circus.item.custom.JesterHammerItem;
-import supertoady.circus.item.custom.ShockBombItem;
-import supertoady.circus.item.custom.TricksterCrossbowItem;
+import supertoady.circus.item.custom.*;
 
 public class ModItems {
 
-    public static Item BALLOON = registerItem("balloon", new Item(
+    public static Item BALLOON = registerItem("balloon", new BalloonItem(
             new Item.Settings()));
 
     public static Item BALLOON_ANIMAL = registerItem("balloon_animal", new Item(

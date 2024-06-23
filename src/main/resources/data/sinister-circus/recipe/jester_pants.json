@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "rbr",
+    "b b",
+    "r r"
+  ],
+  "key": {
+    "r": {
+      "item": "minecraft:red_wool"
+    },
+    "b": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "id": "sinister-circus:jester_pants"
+  }
+}

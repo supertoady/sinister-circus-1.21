@@ -19,6 +19,7 @@ import supertoady.circus.item.ModModelPredicates;
 import supertoady.circus.particle.ModParticles;
 import supertoady.circus.particle.custom.BonkParticle;
 import supertoady.circus.particle.custom.ConfettiParticle;
+import supertoady.circus.particle.custom.DizzyParticle;
 import supertoady.circus.particle.custom.JesterCrossbowTrailParticle;
 
 public class SinisterCircusClient implements ClientModInitializer {
@@ -29,6 +30,7 @@ public class SinisterCircusClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.CONFETTI, ConfettiParticle.Provider::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.BONK, BonkParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.JESTER_CROSSBOW_TRAIL, JesterCrossbowTrailParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.DIZZY, DizzyParticle.Factory::new);
 
         ModModelPredicates.registerPredicates();
     }

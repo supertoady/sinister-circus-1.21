@@ -82,23 +82,9 @@ public class TricksterCrossbowItem extends CrossbowItem {
                 float k = h + i * (float)((j + 1) / 2) * g;
                 i = -i;
                 for (int x = shooter.getRandom().nextBetween(3, 5); x > 0; x--){
-                    ItemStack arrowStack = itemStack;
-
-                    shooter.sendMessage(Text.of("" + stack.getItem()));
-
-                    if (itemStack.isOf(Items.ARROW)) {
-                        shooter.sendMessage(Text.of("arrow"));
-                        if (shooter.getRandom().nextBetween(0, 3) == 1){
-                            shooter.sendMessage(Text.of("random"));
-                            List<RegistryEntry<Potion>> potionEffects = List.of(Potions.POISON, Potions.HARMING, Potions.SLOWNESS);
-                            Random javRandom = new Random();
-
-                            int r = javRandom.nextInt(potionEffects.size());
-                            arrowStack = getTippedArrowStack(potionEffects.get(r));
-                        }
-                    }
-                    arrowStack.set(DataComponentTypes.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
-                    ProjectileEntity projectileEntity = this.createArrowEntity(world, shooter, stack, arrowStack, critical);
+                    itemStack.set(DataComponentTypes.INTANGIBLE_PROJECTILE, Unit.INSTANCE);
+                    ProjectileEntity projectileEntity = this.createArrowEntity(world, shooter, stack, itemStack, critical);
+                    projectileEntity.addCommandTag("trickster-crossbow");
                     shoot(shooter, projectileEntity, j, speed, divergence, k, target);
                     world.spawnEntity(projectileEntity);
                 }
