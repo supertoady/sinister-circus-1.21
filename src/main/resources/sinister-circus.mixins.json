@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "supertoady.circus.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ExampleMixin",
+    "FireworkEntityMixin",
+    "ItemGravityMixin",
+    "PersistentProjectileEntityMixin",
+    "PlayerEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

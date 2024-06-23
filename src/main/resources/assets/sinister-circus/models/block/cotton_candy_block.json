@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sinister-circus:block/cotton_candy_block"
+  }
+}

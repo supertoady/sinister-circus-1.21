@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "sinister-circus:item/choco_frosted_churros"
+  }
+}

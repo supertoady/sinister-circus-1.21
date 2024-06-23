@@ -1,0 +1,28 @@
+{
+  "itemgroup.sinister-circus": "Sinister Circus",
+
+  "item.sinister-circus.balloon": "Balloon",
+  "item.sinister-circus.balloon_bomb": "Balloon Bomb",
+  "item.sinister-circus.balloon_animal": "Balloon Animal",
+
+  "item.sinister-circus.jester_hammer": "Jester Hammer",
+  "item.sinister-circus.trickster_crossbow": "Trickster Crossbow",
+
+  "item.sinister-circus.jester_hat": "Jester Hat",
+  "item.sinister-circus.jester_shirt": "Jester Shirt",
+  "item.sinister-circus.jester_pants": "Jester Pants",
+  "item.sinister-circus.jester_boots": "Jester Boots",
+
+  "item.sinister-circus.cotton_candy": "Cotton Candy",
+  "item.sinister-circus.peppermint": "Peppermint",
+  "item.sinister-circus.churros": "Churros",
+  "item.sinister-circus.sugar_frosted_churros": "Sugar Frosted Churros",
+  "item.sinister-circus.choco_frosted_churros": "Chocolate Frosted Churros",
+
+  "block.sinister-circus.cotton_candy_block": "Cotton Candy Block",
+
+  "effect.sinister-circus.dizzy": "Dizzy",
+  "effect.sinister-circus.sugar_rush": "Sugar Rush",
+
+  "subtitles.katabasis.bonk": "BONK!"
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "sinister-circus:item/trickster_crossbow",
+    "textures": {
+        "layer0": "sinister-circus:item/trickster_crossbow_loading_2"
+    }
+}

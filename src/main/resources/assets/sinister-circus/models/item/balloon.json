@@ -1,0 +1,13 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sinister-circus:item/balloon"
+  },
+  "display": {
+    "ground": {
+      "rotation": [0, 0, 45],
+      "translation": [0, -3, 0],
+      "scale": [0.65, 0.65, 0.65]
+    }
+  }
+}
