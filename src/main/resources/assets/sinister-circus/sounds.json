@@ -4,5 +4,11 @@
     "sounds": [
       "sinister-circus:pizza-tower"
     ]
+  },
+  "squeak": {
+    "subtitle": "subtitles.katabasis.squeak",
+    "sounds": [
+      "sinister-circus:squeak"
+    ]
   }
 }

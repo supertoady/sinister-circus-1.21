@@ -21,7 +21,7 @@ public class CottonCandyBlock extends Block {
 
     @Override
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (stack.isOf(Items.STICK) && !world.isClient()){
+        if (stack.isOf(Items.STICK) && !world.isClient() && player.getAbilities().allowModifyWorld){
 
             stack.decrement(1);
             player.giveItemStack(new ItemStack(ModItems.COTTON_CANDY));

@@ -48,8 +48,9 @@ public class JesterHammerItem extends ToolItem {
             PlayerEntity player = ((PlayerEntity) attacker);
 
             if (player.getVelocity().y < -0.1 && !player.isSprinting()){
-                target.getWorld().playSound(null, target.getBlockPos(), ModSounds.BONK, SoundCategory.PLAYERS, 0.4f, 1);
-                if (new Random().nextInt(3) == 1) {
+                Random random = new Random();
+                target.getWorld().playSound(null, target.getBlockPos(), ModSounds.BONK, SoundCategory.PLAYERS, 0.4F, 1);
+                if (random.nextInt(3) == 1) {
                     target.addStatusEffect(new StatusEffectInstance(ModStatusEffects.DIZZY, 20 * 6, 0));
                 }
 
@@ -58,7 +59,6 @@ public class JesterHammerItem extends ToolItem {
 
                 target.addVelocity(dir);
 
-                Random random = new Random();
                 double range = 0.75;
                 double xOff = random.nextDouble(-range, range);
                 double zOff = random.nextDouble(-range, range);

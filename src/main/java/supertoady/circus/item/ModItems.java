@@ -1,7 +1,6 @@
 package supertoady.circus.item;
 
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -11,10 +10,10 @@ import supertoady.circus.item.custom.*;
 
 public class ModItems {
 
-    public static Item BALLOON = registerItem("balloon", new BalloonItem(
+    public static Item BALLOON = registerItem("balloon", new Item(
             new Item.Settings()));
 
-    public static Item BALLOON_ANIMAL = registerItem("balloon_animal", new Item(
+    public static Item BALLOON_ANIMAL = registerItem("balloon_animal", new BalloonAnimalItem(
             new Item.Settings()));
 
     public static Item BALLOON_BOMB = registerItem("balloon_bomb", new ShockBombItem(
@@ -54,9 +53,5 @@ public class ModItems {
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(SinisterCircus.MOD_ID, name), item);
-    }
-
-    public static void registerModItems() {
-        SinisterCircus.LOGGER.info("Registering mod items for " + SinisterCircus.MOD_ID);
     }
 }

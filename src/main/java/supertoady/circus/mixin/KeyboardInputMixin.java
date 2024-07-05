@@ -32,7 +32,7 @@ public class KeyboardInputMixin {
                 info.setReturnValue(0.0F);
             } else {
 
-                info.setReturnValue(positive ? -1.0F : 0.1F);
+                info.setReturnValue(positive ? -1.0F : 1.0F);
             }
         }
     }

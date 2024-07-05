@@ -9,6 +9,7 @@ import supertoady.circus.SinisterCircus;
 public class ModSounds {
 
     public static SoundEvent BONK = registerSound("bonk");
+    public static SoundEvent SQUEAK = registerSound("squeak");
 
     private static SoundEvent registerSound(String name){
         Identifier id = Identifier.of(SinisterCircus.MOD_ID, name);

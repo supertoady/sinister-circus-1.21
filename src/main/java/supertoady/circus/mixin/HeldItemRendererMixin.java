@@ -1,7 +1,11 @@
 package supertoady.circus.mixin;
 
+import com.google.common.annotations.VisibleForTesting;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.item.HeldItemRenderer;
@@ -55,11 +59,25 @@ public abstract class HeldItemRendererMixin {
         infoReturnable.setReturnValue((stack.isOf(Items.CROSSBOW) || stack.isOf(ModItems.TRICKSTER_CROSSBOW) && CrossbowItem.isCharged(stack)));
     }
 
+    //@Inject(method = "getHandRenderType", at = @At("HEAD"))
+    //private static void getHandRenderType(ClientPlayerEntity player, CallbackInfo info){
+      //  ItemStack itemStack = player.getMainHandStack();
+        //ItemStack itemStack2 = player.getOffHandStack();
+        //boolean bl = itemStack.isOf(Items.BOW) || itemStack2.isOf(Items.BOW);
+        //boolean bl2 = itemStack.isOf(Items.CROSSBOW) || itemStack2.isOf(Items.CROSSBOW);
+        //if (!bl && !bl2) {
+        //    return HeldItemRenderer.HandRenderType.RENDER_BOTH_HANDS;
+        //} else if (player.isUsingItem()) {
+        //    return getUsingItemHandRenderType(player);
+        //} else {
+        //    return isChargedCrossbow(itemStack) ? HeldItemRenderer.HandRenderType.RENDER_MAIN_HAND_ONLY : HeldItemRenderer.HandRenderType.RENDER_BOTH_HANDS;
+        //}
+    //}
+
     @Inject(method = "renderFirstPersonItem", at = @At("HEAD"), cancellable = true)
     private void renderFirstPersonItem(AbstractClientPlayerEntity player, float tickDelta, float pitch, Hand hand, float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo info){
         boolean bl = hand == Hand.MAIN_HAND;
         Arm arm = bl ? player.getMainArm() : player.getMainArm().getOpposite();
-        matrices.push();
 
         boolean bl2;
         float f;
@@ -67,6 +85,8 @@ public abstract class HeldItemRendererMixin {
         float h;
         float j;
         if (item.isOf(ModItems.TRICKSTER_CROSSBOW) && !player.isUsingSpyglass()) {
+            matrices.push();
+
             bl2 = CrossbowItem.isCharged(item);
             boolean bl3 = arm == Arm.RIGHT;
             int i = bl3 ? 1 : -1;
@@ -107,6 +127,8 @@ public abstract class HeldItemRendererMixin {
 
             this.renderItem(player, item, bl3 ? ModelTransformationMode.FIRST_PERSON_RIGHT_HAND : ModelTransformationMode.FIRST_PERSON_LEFT_HAND, !bl3, matrices, vertexConsumers, light);
             info.cancel();
+
+            matrices.pop();
         }
     }
 }
